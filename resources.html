@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>রিসোর্স | IELTS Compass</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">IELTS<span>Compass</span></div>
+        <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-menu">
+            <li><a href="index.html">হোম (Home)</a></li>
+            <li><a href="resources.html" class="active">রিসোর্স (Resources)</a></li>
+            <li><a href="practice.html">প্র্যাকটিস (Practice)</a></li>
+            <li><a href="mock-test.html">মক টেস্ট (Mock Test)</a></li>
+        </ul>
+    </nav>
+
+    <section class="page-header">
+        <h1>প্রয়োজনীয় স্টাডি রিসোর্স</h1>
+        <p>ব্যান্ড ৭.৫+ স্কোর করার জন্য যা কিছু প্রয়োজন, সব এক জায়গায়।</p>
+        <div class="search-container">
+            <input type="text" id="resourceSearch" placeholder="বই, পিডিএফ বা টপিক খুঁজুন...">
+        </div>
+    </section>
+
+    <section class="resource-section">
+        <div class="resource-grid" id="resourceGrid">
+            
+            <div class="resource-card reveal" data-title="Cambridge IELTS 18 PDF">
+                <div class="res-tag">বই (Book)</div>
+                <h3>ক্যামব্রিজ আইইএলটিএস 10 - 19</h3>
+                <p>আসল পরীক্ষার প্রশ্ন এবং উত্তরসহ লেটেস্ট প্র্যাকটিস টেস্ট।</p>
+                <a href="#" class="download-btn">বই কিনুন</a>
+            </div>
+
+            <div class="resource-card reveal" data-title="Academic Vocabulary Band 7+">
+                <div class="res-tag">ভোকাবুলারি (Vocabulary)</div>
+                <h3>Band 7+ ভোকাবুলারি 3000+ words</h3>
+                <p>রাইটিং টাস্ক-২ এবং স্পিকিংয়ের জন্য প্রয়োজনীয় একাডেমিক শব্দ।</p>
+                <a href="#" class="download-btn">লিস্ট দেখুন</a>
+            </div>
+
+            <div class="resource-card reveal" data-title="Listening Tips and Tricks কৌশল">
+                <div class="res-tag">লিসনিং (Listening)</div>
+                <h3>Listening Tips & Tricks</h3>
+                <p>লিসেনিং-এ ভালো স্কোর করার সেরা কৌশল এবং কমন ভুল এড়ানোর উপায়।</p>
+                <a href="listening-tips.html" class="download-btn">টিপস দেখুন</a>
+            </div>
+            
+            <div class="resource-card reveal" data-title="Reading Strategies and Tips কৌশল">
+                <div class="res-tag">রিডিং (Reading)</div>
+                <h3>Reading Tips & Tricks</h3>
+                <p>লিমিটেড সময়ের মধ্যে বড় প্যাসেজ সলভ করার কৌশল এবং Skimming & Scanning মেথড।</p>
+                <a href="reading-tips.html" class="download-btn">টিপস দেখুন</a>
+            </div>           
+
+            <div class="resource-card reveal" data-title="Writing Task 2 Templates">
+                <div class="res-tag">রাইটিং (Writing)</div>
+                <h3>এসে (Essay) টেমপ্লেট</h3>
+                <p>Opinion, Discussion এবং Solution এস’র জন্য সাজানো লেআউট।</p>
+                <a href="#" class="download-btn">আরো দেখুন</a>
+            </div>
+
+            <div class="resource-card reveal" data-title="Speaking Model Answer স্যাম্পল">
+                <div class="res-tag">স্পিকিং (Speaking)</div>
+                <h3>Speaking Model Answers</h3>
+                <p>ব্যান্ড ৮.০ লেভেলের স্পিকিং স্যাম্পল এবং কিউ-কার্ডের সঠিক উত্তর।</p>
+                <a href="speaking-models.html" class="download-btn">মডেল দেখুন</a>
+            </div>            
+
+            <div class="resource-card reveal" data-title="Listening Answer Sheet">
+                <div class="res-tag">পরীক্ষার টুলস (Exam Tools)</div>
+                <h3>অফিসিয়াল আনসার শিট</h3>
+                <p>আসল পরীক্ষার মতো করে উত্তরপত্র পূরণ করার প্র্যাকটিস করুন।</p>
+                <a href="#" class="download-btn">ডাউনলোড করুন</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="book-slider-section reveal">
+        <h2 class="section-title">Cambridge Series (ক্যামব্রিজ সিরিজ)</h2>
+        <div class="slider-container">
+            <div class="book-slider" id="bookSlider">
+                <div class="book-item active">
+                    <img src="assets/cambridge18.jpg" alt="IELTS 18">
+                    <span>IELTS 18</span>
+                </div>
+                <div class="book-item">
+                    <img src="assets/cambridge17.jpg" alt="IELTS 17">
+                    <span>IELTS 17</span>
+                </div>
+                <div class="book-item">
+                    <img src="assets/cambridge16.jpg" alt="IELTS 16">
+                    <span>IELTS 16</span>
+                </div>
+                <div class="book-item">
+                    <img src="assets/cambridge15.jpg" alt="IELTS 15">
+                    <span>IELTS 15</span>
+                </div>
+            </div>
+            
+            <button class="slider-btn prev" onclick="moveSlider(-1)">❮</button>
+            <button class="slider-btn next" onclick="moveSlider(1)">❯</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; ২০২৬ আইইএলটিএস কম্পাস বাংলাদেশ। আপনার স্বপ্নপূরণে আমরা প্রতিজ্ঞাবদ্ধ।</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

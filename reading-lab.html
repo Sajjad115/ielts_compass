@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module Lab | IELTS Compass</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #f0f4f8; --text: #1e293b; --primary-neon: #00d2ff; --shadow-light: #ffffff; --shadow-dark: #d1d9e6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg); font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text); padding: 100px 20px 60px; }
+        
+        .back-nav { position: fixed; top: 25px; left: 25px; z-index: 1000; }
+        .btn-back { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-weight: 800; padding: 12px 20px; border-radius: 15px; background: var(--bg); box-shadow: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light); transition: 0.3s; }
+        .btn-back:hover { color: var(--primary-neon); transform: translateX(-5px); box-shadow: 0 0 15px rgba(0, 210, 255, 0.3); }
+
+        .header { text-align: center; margin-bottom: 60px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 35px; max-width: 1100px; margin: 0 auto; }
+        
+        .card { 
+            background: var(--bg); padding: 40px 20px; border-radius: 30px; text-align: center; text-decoration: none; color: var(--text); 
+            box-shadow: 10px 10px 20px var(--shadow-dark), -10px -10px 20px var(--shadow-light); transition: 0.4s; display: flex; flex-direction: column; align-items: center;
+        }
+        .card:hover { transform: translateY(-10px); border: 1px solid var(--primary-neon); box-shadow: 0 0 20px rgba(0, 210, 255, 0.2); }
+        .num-icon { width: 60px; height: 60px; background: var(--bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light); font-weight: 800; color: #3a7bd5; }
+        .status-tag { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: #94a3b8; margin-top: 10px; }
+        .card:hover .status-tag { color: var(--primary-neon); }
+    </style>
+</head>
+<body>
+    <div class="back-nav"><a href="practice.html" class="btn-back">← Hub</a></div>
+    
+    <div class="header">
+        <h1 id="lab-title">Module Lab</h1>
+        <p>Select a practice session to begin.</p>
+    </div>
+
+    <div class="grid" id="card-container"></div>
+
+    <script>
+        const container = document.getElementById('card-container');
+        const path = window.location.pathname;
+        
+        // Configuration mapping based on the filename
+        let folder = "listenings";
+        let prefix = "lp";
+        let title = "Listening Lab";
+
+        if(path.includes('reading')) { folder = "readings"; prefix = "rp"; title = "Reading Lab"; }
+        if(path.includes('writting')) { folder = "writtings"; prefix = "wp"; title = "Writting Lab"; }
+        if(path.includes('speaking')) { folder = "speakings"; prefix = "sp"; title = "Speaking Lab"; }
+
+        document.getElementById('lab-title').innerText = title;
+
+        for (let i = 1; i <= 15; i++) {
+            const card = document.createElement('a');
+            card.href = `${folder}/${prefix}-${i}.html`;
+            card.className = 'card';
+            card.innerHTML = `
+                <div class="num-icon">${i < 10 ? '0'+i : i}</div>
+                <h3>Set ${i}</h3>
+                <div class="status-tag">Ready to start</div>
+            `;
+            container.appendChild(card);
+        }
+    </script>
+</body>
+</html>
